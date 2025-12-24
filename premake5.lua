@@ -1,7 +1,7 @@
 project "GLFW"
 	kind "StaticLib"
 	language "C"
-	staticruntime "off"
+	staticruntime "on"
 	warnings "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -24,7 +24,7 @@ project "GLFW"
 
 		"src/platform.c",
 		"src/vulkan.c",
-		"src/window.c",
+		"src/window.c"
 	}
 
 	filter "system:linux"
@@ -96,6 +96,7 @@ project "GLFW"
 		{ 
 			"_GLFW_WIN32",
 			"_CRT_SECURE_NO_WARNINGS"
+			--"_GLFW_USE_CONFIG_H"
 		}
 
 	filter "configurations:Debug"
