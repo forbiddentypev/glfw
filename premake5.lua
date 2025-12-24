@@ -96,7 +96,6 @@ project "GLFW"
 		{ 
 			"_GLFW_WIN32",
 			"_CRT_SECURE_NO_WARNINGS"
-			--"_GLFW_USE_CONFIG_H"
 		}
 
 	filter "configurations:Debug"
